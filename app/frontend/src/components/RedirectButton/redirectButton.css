@@ -1,0 +1,23 @@
+/* Estilo para o botão de redirecionamento */
+.redirect-button {
+  background-color: #007bff; /* Cor de fundo azul */
+  color: #fff; /* Cor do texto branco */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para o botão de redirecionamento quando o mouse passa por cima */
+.redirect-button:hover {
+  background-color: #0056b3; /* Cor de fundo azul mais escura */
+}
+
+/* Estilo para o botão de redirecionamento quando está desabilitado */
+.redirect-button:disabled {
+  background-color: #ccc; /* Cor de fundo cinza quando desabilitado */
+  cursor: not-allowed;
+}

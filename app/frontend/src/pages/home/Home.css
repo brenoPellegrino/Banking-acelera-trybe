@@ -1,0 +1,67 @@
+/* Arquivo Home.css */
+
+/* Estilo para o container principal da página Home */
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilo para o título da página */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para os componentes RegisterPayment e ListTransaction */
+.RegisterPayment,
+.ListTransaction {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Estilo para o botão de envio do RegisterPayment */
+.RegisterPayment input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Estilo para o botão de envio do RegisterPayment quando hover */
+.RegisterPayment input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para a tabela dentro do componente ListTransaction */
+.ListTransaction table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Estilo para as células da tabela dentro do componente ListTransaction */
+.ListTransaction table th,
+.ListTransaction table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Estilo para o cabeçalho da tabela dentro do componente ListTransaction */
+.ListTransaction table th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Estilo para as linhas alternadas da tabela dentro do componente ListTransaction */
+.ListTransaction table tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}

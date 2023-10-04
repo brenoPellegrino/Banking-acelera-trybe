@@ -1,0 +1,21 @@
+button.delete-btn {
+  background-color: #f44336; /* Cor de fundo vermelha */
+  color: #fff; /* Cor do texto branca */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para o botão de exclusão quando o mouse passa por cima */
+button.delete-btn:hover {
+  background-color: #d32f2f; /* Cor de fundo vermelha mais escura */
+}
+
+/* Estilo para o botão de exclusão quando está desabilitado */
+button.delete-btn:disabled {
+  background-color: #ccc; /* Cor de fundo cinza quando desabilitado */
+  cursor: not-allowed;
+}

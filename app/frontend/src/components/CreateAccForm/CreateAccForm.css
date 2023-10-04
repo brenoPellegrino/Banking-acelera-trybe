@@ -1,0 +1,65 @@
+/* Estilo para o componente CreateAccForm */
+.create-acc-form-container {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Centralize o componente horizontalmente */
+  font-family: Arial, sans-serif;
+}
+
+.create-acc-form-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.create-acc-form-container form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.create-acc-form-container form input[type="text"],
+.create-acc-form-container form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.create-acc-form-container form input[type="submit"] {
+  background-color: #007bff; /* Cor de fundo azul */
+  color: #fff; /* Cor do texto branco */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.create-acc-form-container form input[type="submit"]:hover {
+  background-color: #0056b3; /* Cor de fundo azul mais escura */
+}
+
+.create-acc-form-container button {
+  background-color: #dc3545; /* Cor de fundo vermelha */
+  color: #fff; /* Cor do texto branco */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.create-acc-form-container button:hover {
+  background-color: #c82333; /* Cor de fundo vermelha mais escura */
+}
