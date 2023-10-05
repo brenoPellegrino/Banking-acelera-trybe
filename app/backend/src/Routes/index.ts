@@ -4,6 +4,10 @@ import transactionsRouter from './TransactionsRouter';
 
 const router = Router();
 
+router.use('/', (_req, res) => {
+  res.send('Hello World!');
+});
+
 router.use('/users', usersRouter);
 router.use('/transactions', transactionsRouter);
 
