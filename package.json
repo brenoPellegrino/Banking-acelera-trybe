@@ -4,6 +4,7 @@
   "description": "Projeto de Open Banking",
   "main": "index.js",
   "scripts": {
+    "start": "cd ./app/backend && npm start",
     "install:front": "cd ./app/frontend && npm install",
     "install:back": "cd ./app/backend && npm install",
     "install:apps": "npm run install:front && npm run install:back",
