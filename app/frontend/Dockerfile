@@ -20,7 +20,7 @@ COPY . ./
 
 # Sinalize que aplicação expõe a porta 3000
 
-EXPOSE 3000
+EXPOSE 5173
 
 ENTRYPOINT [ "npm", "run" ]
 
