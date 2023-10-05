@@ -21,8 +21,6 @@ export default function LoginForm() {
     .then(response => response)
     .catch(error => error.response);
 
-    alert(response.status)
-
     if (response.status !== 200) {
       alert(response.data.message);
       return;

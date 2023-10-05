@@ -8,10 +8,11 @@ import RedirectButton from "../../components/RedirectButton";
 import Menu from "../../components/Menu";
 
 export default function Home() {
+  const token = localStorage.getItem("@token");
+
+  
   const [transactions, setTransactions] = useState<ITransaction[]>([]);
   const [shoudReload, setShouldReload] = useState<boolean>(false);
-
-  const token = localStorage.getItem("@token");
 
   const updateTransactions = useCallback(async () => {
     try {
@@ -29,6 +30,7 @@ export default function Home() {
   }, [token]);
 
   useEffect(() => {
+    
     async function fetchData() {
       const apiResponse = await updateTransactions()
         .then((response) => response)
@@ -43,6 +45,10 @@ export default function Home() {
     fetchData();
     setShouldReload(false);
   }, [updateTransactions, shoudReload]);
+
+  if (!token) {
+    return window.location.href = "/";
+  }
 
   return (
     <div>

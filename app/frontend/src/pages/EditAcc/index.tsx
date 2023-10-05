@@ -5,6 +5,13 @@ import RedirectButton from "../../components/RedirectButton";
 import "./EditAcc.css";
 
 export default function EditAcc() {
+  const token = localStorage.getItem("@token");
+
+  if (!token) {
+    console.log("token not found");
+    return window.location.href = "/";
+  }
+
   return (
     <div className="edit-acc-container">
       <div className="menu-container">
