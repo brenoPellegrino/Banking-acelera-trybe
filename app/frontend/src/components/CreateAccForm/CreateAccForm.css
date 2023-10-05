@@ -1,12 +1,12 @@
 /* Estilo para o componente CreateAccForm */
 .create-acc-form-container {
-  max-width: 400px;
-  width: 100%;
+  /* max-width: 400px; */
+  width: 80%;
   padding: 20px;
   background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* border: 1px solid #ccc; */
+  /* border-radius: 5px; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   margin: 0 auto; /* Centralize o componente horizontalmente */
   font-family: Arial, sans-serif;
 }
@@ -23,8 +23,8 @@
 
 .create-acc-form-container form input[type="text"],
 .create-acc-form-container form input[type="password"] {
-  width: 100%;
-  padding: 10px;
+  width: 90%;
+  padding: px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-top: 5px;
@@ -39,7 +39,7 @@
   border-radius: 5px;
   font-size: 16px;
   text-align: center;
-  margin-top: 20px;
+  
   transition: background-color 0.3s ease;
 }
 

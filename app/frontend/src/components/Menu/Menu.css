@@ -21,7 +21,7 @@
   flex-direction: column;
   gap: 10px;
   position: absolute;
-  top: 50px; /* Distância do topo (ajuste conforme necessário) */
+  top: 75px; /* Distância do topo (ajuste conforme necessário) */
   left: 0; /* Alinhe à direita */
   background-color: #fff; /* Cor de fundo branca */
   border: 1px solid #ccc;
@@ -53,4 +53,13 @@
 .menu-button-link:disabled {
   background-color: #ccc; /* Cor de fundo cinza quando desabilitado */
   cursor: not-allowed;
+}
+
+.logout-btn button{
+  background-color: #ff0000;
+  
+}
+
+.home-btn button{
+  background-color: #007bff;
 }

@@ -46,10 +46,16 @@ export default function Home() {
 
   return (
     <div>
-      <Menu />
-      <RegisterPayment setShouldReload={setShouldReload} />
+      <div className="menu-container">
+        <Menu />
+      </div>
+      <div className="registerPayment">
+        <RegisterPayment setShouldReload={setShouldReload} />
+      </div>
       <ListTransaction transactions={transactions} />
-      <RedirectButton path="/" name="Logout" clearToken={true} />
+      <div className="logout-btn">
+        <RedirectButton path="/" name="Logout" clearToken={true} />
+      </div>
       <RedirectButton path="/editAcc" name="Edit Account" clearToken={false} />
     </div>
   );

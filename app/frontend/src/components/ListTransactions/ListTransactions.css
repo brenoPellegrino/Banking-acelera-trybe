@@ -1,13 +1,13 @@
 /* Estilo para o componente ListTransactions */
 .list-transactions-container {
-  max-height: 300px; /* Defina a altura máxima desejada para mostrar as 5 primeiras transações */
+  max-height: 250px; /* Defina a altura máxima desejada para mostrar as 5 primeiras transações */
   overflow-y: auto; /* Adicione uma barra de rolagem vertical, se necessário */
 }
 
 /* Estilo para o título */
 h1 {
-  font-size: 24px; /* Tamanho da fonte do título */
-  margin-bottom: 20px; /* Espaçamento inferior para separar o título da tabela */
+  font-size: 18px; /* Tamanho da fonte do título */
+  margin-bottom: 5px; /* Espaçamento inferior para separar o título da tabela */
 }
 
 /* Estilo para a tabela */

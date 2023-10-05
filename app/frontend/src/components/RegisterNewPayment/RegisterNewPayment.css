@@ -13,12 +13,13 @@
 
 .register-payment-container h1 {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .register-payment-container form label {
   display: block;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 0px;
   font-weight: bold;
 }
 

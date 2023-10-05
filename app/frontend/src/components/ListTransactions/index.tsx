@@ -11,8 +11,8 @@ export default function ListTransaction({
   );
 
   const sortedTransactions = transactions.sort((a, b) => {
-    const dateA = new Date(a.date).getTime();
-    const dateB = new Date(b.date).getTime();
+    const dateA = new Date(b.date).getTime();
+    const dateB = new Date(a.date).getTime();
     return dateA - dateB;
   });
 

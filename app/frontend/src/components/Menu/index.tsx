@@ -1,6 +1,6 @@
 import { useState } from "react";
 import RedirectButton from "../RedirectButton";
-import './Menu.css';
+import "./Menu.css";
 
 export default function Menu() {
   const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -13,14 +13,18 @@ export default function Menu() {
     <div>
       <button
         onClick={() => toggleMenu()}
-        className={`menu-button ${isOpened ? 'menu-button-opened' : ''}`}
+        className={`menu-button ${isOpened ? "menu-button-opened" : ""}`}
       >
         Menu
       </button>
       {isOpened ? (
         <div className="menu-content">
-          <RedirectButton path="/home" name="Home" clearToken={false} />
-          <RedirectButton path="/" name="Logout" clearToken={true} />
+          <div className="home-btn">
+            <RedirectButton path="/home" name="Home" clearToken={false} />
+          </div>
+          <div className="logout-btn">
+            <RedirectButton path="/" name="Logout" clearToken={true} />
+          </div>
         </div>
       ) : null}
     </div>

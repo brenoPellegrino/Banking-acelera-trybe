@@ -1,54 +1,57 @@
-import { useEffect, useState } from "react";
-import InputMask from "react-input-mask";
+import { useState } from "react";
 import "./CreateAccForm.css";
 import IUserRegisterForm from "../../interfaces/IUserRegisterForm";
 import api from "../../api";
 import { useNavigate } from "react-router-dom";
 
-export default function CreateAccForm(
-  { isEditAcc = false }: { isEditAcc: boolean }
-) {
-  const [cpfCnpj, setcpfCnpj] = useState<string>("");
+export default function CreateAccForm({
+  isEditAcc = false,
+}: {
+  isEditAcc: boolean;
+}) {
+  const [cpfCnpj, setCpfCnpj] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [passwordConfirmation, setPasswordConfirmation] = useState<string>("");
-  const [isCpf, setIsCpf] = useState<boolean>(true);
 
   const navigate = useNavigate();
 
   const token = isEditAcc ? localStorage.getItem("@token") : null;
 
   console.log(token);
-  
 
-  useEffect(() => {
-    handlerCpfCnpjChange();
-
-  }, [cpfCnpj]);
-
-  function handlerCpfCnpjChange(): void {
-    const stringWithoutSymbols = cpfCnpj.replace(/[.-]/g, "");
-    if (stringWithoutSymbols.includes("000")) {
-      setIsCpf(false);
-    } else {
-      setIsCpf(true);
+  function formatIdentification(string:string): string {
+    const idToFormat = string.replace(/[^a-zA-Z0-9]/g, "");
+    if (idToFormat.length <= 11) {
+      return idToFormat.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+    } 
+    if (idToFormat.length <= 14) {
+      return idToFormat.replace(
+        /^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/,
+        '$1.$2.$3/$4-$5'
+      );
     }
+    return formatIdentification(idToFormat.slice(-14));
+  }
+
+  
+  function onCpfCnpjChange(field: string): void {
+    const formatedId = formatIdentification(field);
+    setCpfCnpj(formatedId);
   }
 
   function clearState(): void {
-    setcpfCnpj("");
     setName("");
     setEmail("");
     setPassword("");
     setPasswordConfirmation("");
-    setIsCpf(true);
+    setCpfCnpj("");
 
     return;
   }
-
-  async function editUser(data: IUserRegisterForm): Promise<void> {
   
+  async function editUser(data: IUserRegisterForm): Promise<void> {
     const apiResponse = await api
       .patch(`/users`, data, {
         headers: {
@@ -137,18 +140,16 @@ export default function CreateAccForm(
         {!isEditAcc && (
           <label>
             CPF/CNPJ
-            <InputMask
+            <input
               type="text"
               name="cpfCnpj"
               value={cpfCnpj}
-              mask={isCpf ? "999.999.999-99" : "99.999.999/9999-99"}
-              maskChar=" "
-              onChange={(e) => setcpfCnpj(e.target.value)}
+              onChange={(e) => onCpfCnpjChange(e.target.value)}
             />
           </label>
         )}
         <label>
-          { isEditAcc ? "New Password:" : "Password:"}
+          {isEditAcc ? "New Password:" : "Password:"}
           <input
             type="password"
             name="password"
@@ -167,9 +168,7 @@ export default function CreateAccForm(
         </label>
         <input type="submit" value="Submit" />
       </form>
-      <div>
-        <button onClick={() => clearState()}>Clear</button>
-      </div>
+      <button onClick={() => clearState()}>Clear</button>
     </div>
   );
 }
