@@ -1,5 +1,3 @@
-Claro, posso ajudar a editar o seu README. Aqui está uma versão revisada com algumas melhorias:
-
 ```markdown
 # Banking Acelera Trybe
 
