@@ -43,7 +43,7 @@ Se você deseja contribuir para este projeto, fique à vontade para fazer um for
 
 ## Contato
 
-Para qualquer dúvida ou informação adicional, você pode entrar em contato com [Breno] via e-mail: [bdpellegrino@gmail.com].
+Para qualquer dúvida ou informação adicional, você pode entrar em contato com Breno Pellegrino via e-mail: [bdpellegrino@gmail.com].
 
 ## Agradecimentos
 
