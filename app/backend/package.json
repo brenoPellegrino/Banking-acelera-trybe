@@ -1,5 +1,5 @@
 {
-  "name": "recipes-app-backend",
+  "name": "banking-app-backend",
   "version": "1.0.0",
   "description": "",
   "main": "./build/server",
