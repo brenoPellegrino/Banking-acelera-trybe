@@ -3,6 +3,8 @@
 
 Este projeto foi proposto como uma simulação de um processo seletivo.
 
+```
+
 ## Instalação
 
 1. Clone este repositório para o seu ambiente de desenvolvimento local:
